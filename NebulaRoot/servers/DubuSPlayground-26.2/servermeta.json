@@ -1,0 +1,16 @@
+{
+  "$schema": "file:///C:/Users%20Files/mjk/Game/Minecraft/Java/Server/DubuSPlaygroundSeason1Project/Development-DubuSPlaygroundSeason1PatchServer/NebulaRoot/schemas/ServerMetaSchema.schema.json",
+  "meta": {
+    "version": "1.0.0",
+    "name": "Dubu's Playground",
+    "description": "DubuSPlayground Minecraft 26.2 Fabric server",
+    "icon": "How to set the server icon: https://github.com/dscalzi/Nebula#setting-the-server-icon",
+    "address": "minjunkim0205.iptime.org:25565",
+    "mainServer": true,
+    "autoconnect": true
+  },
+  "fabric": {
+    "version": "0.19.3"
+  },
+  "untrackedFiles": []
+}
