@@ -12,7 +12,7 @@
 | 로더 | Fabric |
 | Fabric Loader | `0.19.3` |
 | 서버 접속 주소 | `{server_ip}:25565` |
-| 파일 다운로드 주소 | `http://{server_ip}/` |
+| 파일 다운로드 주소 | `http://{server_ip}:9090/` |
 | Nebula 루트 | `NebulaRoot` |
 
 ## 가장 자주 쓰는 명령
@@ -130,7 +130,7 @@ npm.cmd run start -- generate distro
 정상 생성되면 `distribution.json`의 `icon` 값이 다음처럼 바뀝니다.
 
 ```text
-http://{server_ip}/servers/DubuSPlayground-26.2/server-icon.png
+http://{server_ip}:9090/servers/DubuSPlayground-26.2/server-icon.png
 ```
 
 ## 서버 메타 수정
@@ -186,14 +186,14 @@ NebulaRoot/meta/distrometa.json
 
 ## 웹서버에 올려야 하는 것
 
-`BASE_URL`이 `http://{server_ip}/`이므로, 웹서버의 루트 경로가 `NebulaRoot` 내용을 그대로 제공해야 합니다.
+`BASE_URL`이 `http://{server_ip}:9090/`이므로, 웹서버의 루트 경로가 `NebulaRoot` 내용을 그대로 제공해야 합니다.
 
 즉 브라우저에서 아래 주소들이 접근 가능해야 합니다.
 
 ```text
-http://{server_ip}/distribution.json
-http://{server_ip}/repo/...
-http://{server_ip}/servers/DubuSPlayground-26.2/...
+http://{server_ip}:9090/distribution.json
+http://{server_ip}:9090/repo/...
+http://{server_ip}:9090/servers/DubuSPlayground-26.2/...
 ```
 
 웹서버에 올릴 대상은 `NebulaRoot` 폴더 안의 내용입니다.
@@ -213,7 +213,7 @@ NebulaRoot/servers/
 저장소 루트의 `Caddyfile`은 아래처럼 `NebulaRoot`를 웹 루트로 잡습니다.
 
 ```caddyfile
-:80 {
+:9090 {
 	root * ./NebulaRoot
 	file_server
 }
@@ -225,10 +225,10 @@ NebulaRoot/servers/
 caddy run
 ```
 
-테스트용으로 80번 포트 대신 8080번 포트를 쓰려면 `Caddyfile`의 첫 줄을 `:8080 {`로 바꾸고 아래 주소로 확인합니다.
+테스트용으로 9090번 포트를 쓰려면 `Caddyfile`의 첫 줄을 `:9090 {`로 두고 아래 주소로 확인합니다.
 
 ```text
-http://localhost:8080/distribution.json
+http://localhost:9090/distribution.json
 ```
 
 ## 새 배포 반영 순서
@@ -241,7 +241,7 @@ npm.cmd run start -- generate distro
 ```
 
 3. `NebulaRoot` 안의 변경된 파일을 웹서버에 업로드합니다.
-4. 브라우저에서 `http://{server_ip}/distribution.json`이 열리는지 확인합니다.
+4. 브라우저에서 `http://{server_ip}:9090/distribution.json`이 열리는지 확인합니다.
 5. Helios Launcher에서 서버 목록과 다운로드가 정상인지 확인합니다.
 
 ## 자주 나는 문제
@@ -271,7 +271,7 @@ NebulaRoot/servers/DubuSPlayground-26.2/server-icon.png
 예:
 
 ```text
-http://{server_ip}/repo/lib/net/fabricmc/fabric-loader/0.19.3/fabric-loader-0.19.3.jar
+http://{server_ip}:9090/repo/lib/net/fabricmc/fabric-loader/0.19.3/fabric-loader-0.19.3.jar
 ```
 
 안 열리면 웹서버 루트가 `NebulaRoot`와 맞지 않거나 파일 업로드가 빠진 것입니다.

@@ -21,7 +21,7 @@ echo Starting Caddy from:
 echo %cd%
 echo.
 echo Test URL:
-echo http://localhost/distribution.json
+echo http://localhost:9090/distribution.json
 echo.
 
 "%~dp0caddy_windows_amd64.exe" run --config "%~dp0Caddyfile"
