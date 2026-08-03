@@ -1,7 +1,7 @@
 {
   "$schema": "file:///C:/Users%20Files/mjk/Game/Minecraft/Java/Server/DubuSPlaygroundSeason1Project/Development-DubuSPlaygroundSeason1PatchServer/NebulaRoot/schemas/ServerMetaSchema.schema.json",
   "meta": {
-    "version": "1.0.0",
+    "version": "1.0.1",
     "name": "Dubu's Playground",
     "description": "DubuSPlayground Minecraft 26.2 Fabric server",
     "icon": "How to set the server icon: https://github.com/dscalzi/Nebula#setting-the-server-icon",

@@ -7,7 +7,7 @@
       "name": "Dubu's Playground",
       "description": "DubuSPlayground Minecraft 26.2 Fabric server",
       "icon": "http://minjunkim0205.iptime.org:9090/servers/DubuSPlayground-26.2/server-icon.png",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "address": "minjunkim0205.iptime.org:25565",
       "minecraftVersion": "26.2",
       "mainServer": true,
@@ -113,16 +113,6 @@
             "size": 2820763,
             "url": "http://minjunkim0205.iptime.org:9090/servers/DubuSPlayground-26.2/fabricmods/required/iris-fabric-1.11.2+mc26.2.jar",
             "MD5": "11c0b0d99bf9d9cb55f9e35a2d6bb85f"
-          }
-        },
-        {
-          "id": "net.caffeinemc.mods:sodium:0.9.1+mc26.2@jar",
-          "name": "Sodium",
-          "type": "FabricMod",
-          "artifact": {
-            "size": 1834384,
-            "url": "http://minjunkim0205.iptime.org:9090/servers/DubuSPlayground-26.2/fabricmods/required/sodium-fabric-0.9.1+mc26.2.jar",
-            "MD5": "12238397e6e067c00369e72999e8d163"
           }
         },
         {
