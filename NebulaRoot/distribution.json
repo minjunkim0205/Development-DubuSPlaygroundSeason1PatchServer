@@ -6,7 +6,7 @@
       "id": "DubuSPlayground-26.2",
       "name": "Dubu's Playground",
       "description": "DubuSPlayground Minecraft 26.2 Fabric server",
-      "icon": null,
+      "icon": "http://minjunkim0205.iptime.org:9090/servers/DubuSPlayground-26.2/server-icon.png",
       "version": "1.0.0",
       "address": "minjunkim0205.iptime.org:25565",
       "minecraftVersion": "26.2",
