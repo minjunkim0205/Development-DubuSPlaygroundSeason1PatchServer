@@ -116,6 +116,16 @@
           }
         },
         {
+          "id": "net.caffeinemc.mods:sodium:0.9.1+mc26.2@jar",
+          "name": "Sodium",
+          "type": "FabricMod",
+          "artifact": {
+            "size": 1834384,
+            "url": "http://minjunkim0205.iptime.org:9090/servers/DubuSPlayground-26.2/fabricmods/required/sodium-fabric-0.9.1+mc26.2.jar",
+            "MD5": "12238397e6e067c00369e72999e8d163"
+          }
+        },
+        {
           "id": "de.maxhenkel:voicechat:2.6.21+26.2@jar",
           "name": "Simple Voice Chat",
           "type": "FabricMod",
