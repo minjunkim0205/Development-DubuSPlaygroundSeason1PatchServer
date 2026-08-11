@@ -134,6 +134,60 @@
             "url": "http://minjunkim0205.iptime.org:9090/servers/DubuSPlayground-26.2/fabricmods/required/voicechat-fabric-2.6.21+26.2.jar",
             "MD5": "f6547975fbb98945c850a77063f95eae"
           }
+        },
+        {
+          "id": "options.txt",
+          "name": "options.txt",
+          "type": "File",
+          "artifact": {
+            "size": 6040,
+            "url": "http://minjunkim0205.iptime.org:9090/servers/DubuSPlayground-26.2/files/options.txt",
+            "path": "options.txt"
+          }
+        },
+        {
+          "id": "§6Immersive§8_§6Interfaces§8.zip",
+          "name": "§6Immersive§8_§6Interfaces§8.zip",
+          "type": "File",
+          "artifact": {
+            "size": 1195419,
+            "url": "http://minjunkim0205.iptime.org:9090/servers/DubuSPlayground-26.2/files/resourcepacks/%C2%A76Immersive%C2%A78_%C2%A76Interfaces%C2%A78.zip",
+            "MD5": "99cc6588027bd10150073c3fde01d89a",
+            "path": "resourcepacks/§6Immersive§8_§6Interfaces§8.zip"
+          }
+        },
+        {
+          "id": "상옵쉐이더.zip",
+          "name": "상옵쉐이더.zip",
+          "type": "File",
+          "artifact": {
+            "size": 8301317,
+            "url": "http://minjunkim0205.iptime.org:9090/servers/DubuSPlayground-26.2/files/shaderpacks/%EC%83%81%EC%98%B5%EC%89%90%EC%9D%B4%EB%8D%94.zip",
+            "MD5": "f77fadf6045e18bab72343ba75438c41",
+            "path": "shaderpacks/상옵쉐이더.zip"
+          }
+        },
+        {
+          "id": "중옵쉐이더.zip",
+          "name": "중옵쉐이더.zip",
+          "type": "File",
+          "artifact": {
+            "size": 456332,
+            "url": "http://minjunkim0205.iptime.org:9090/servers/DubuSPlayground-26.2/files/shaderpacks/%EC%A4%91%EC%98%B5%EC%89%90%EC%9D%B4%EB%8D%94.zip",
+            "MD5": "576ef06da170458879f3a03e685d487a",
+            "path": "shaderpacks/중옵쉐이더.zip"
+          }
+        },
+        {
+          "id": "하옵쉐이더.zip",
+          "name": "하옵쉐이더.zip",
+          "type": "File",
+          "artifact": {
+            "size": 1124960,
+            "url": "http://minjunkim0205.iptime.org:9090/servers/DubuSPlayground-26.2/files/shaderpacks/%ED%95%98%EC%98%B5%EC%89%90%EC%9D%B4%EB%8D%94.zip",
+            "MD5": "3fcde69c80272216987dc64f91d13c3f",
+            "path": "shaderpacks/하옵쉐이더.zip"
+          }
         }
       ]
     }
