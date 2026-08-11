@@ -60,6 +60,11 @@ PowerShell에서 `npm`이 실행 정책 때문에 막히면 `npm.cmd`를 사용�
 ```
 
 `.env`는 Nebula 실행 설정입니다. 이 파일은 `.gitignore`에 들어가 있으므로 보통 Git에 올라가지 않습니다.
+다른 PC에서 새로 받을 때는 `.env.example`을 복사해서 `.env`를 만들고, 필요한 값만 자기 환경에 맞게 바꿉니다.
+
+```powershell
+Copy-Item .env.example .env
+```
 
 `NebulaRoot/distribution.json`은 Helios Launcher가 읽는 최종 배포 파일입니다.
 
@@ -106,6 +111,43 @@ NebulaRoot/servers/DubuSPlayground-26.2/files/resourcepacks/팩파일.zip
 ```
 
 파일을 넣은 뒤 다시 생성합니다.
+
+```powershell
+npm.cmd run start -- generate distro
+```
+
+### `options.txt`를 최초 1회용 기본값처럼 배포하기
+
+마인크래프트의 `options.txt`는 키바인딩, 그래픽 설정, 언어, 사운드 같은 개인 설정을 포함합니다.
+그냥 `files/options.txt`로 배포하면 유저가 키바인딩을 바꾼 뒤에도 런처가 MD5 불일치로 다시 덮어쓸 수 있습니다.
+
+유저가 처음 받을 기본 설정만 배포하고, 이후 유저가 바꾼 설정은 유지하려면 `options.txt`를 `untrackedFiles`로 등록합니다.
+
+배포할 파일 위치:
+
+```text
+NebulaRoot/servers/DubuSPlayground-26.2/files/options.txt
+```
+
+`NebulaRoot/servers/DubuSPlayground-26.2/servermeta.json`의 최상위에 아래처럼 설정합니다.
+
+```json
+"untrackedFiles": [
+  {
+    "appliesTo": [
+      "files"
+    ],
+    "patterns": [
+      "options.txt"
+    ]
+  }
+]
+```
+
+이 설정을 쓰면 `options.txt`는 배포 파일 목록에는 들어가지만 MD5 추적 대상에서 제외됩니다.
+즉, 최초 다운로드용 기본값으로 사용할 수 있고 유저가 이후 키바인딩을 바꿔도 다음 실행 때 강제로 원복되지 않게 할 수 있습니다.
+
+파일 추가나 설정 변경 후에는 항상 다시 생성합니다.
 
 ```powershell
 npm.cmd run start -- generate distro
